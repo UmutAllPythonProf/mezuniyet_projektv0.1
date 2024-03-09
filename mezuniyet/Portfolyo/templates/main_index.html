@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portfolyom</title>
+    <link rel="icon" href="../static/img/web_logo.png">
+    <style>
+      /* Scrollbar'ı stillendirme */
+      /* Firefox, Edge ve Chrome için */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      
+      /* Firefox için */
+      * {
+        scrollbar-width: inherit;
+        scrollbar-color: #555 black;
+      }
+      
+      /* Yuvarlaklaştırılmış durum çubuğu */
+      ::-webkit-scrollbar-thumb {
+        background-color: #555;
+        border-radius: 6px;
+      }
+      
+      /* İz düşümü */
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+      
+      /* İçerikteki içbükey boşluk */
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+      /* İz düşümüne içbükeylik ekleme */
+      ::-webkit-scrollbar-track:hover {
+        background: #000000;
+      }
+      
+      /* İz doldurma */
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+      </style>
+  </head>
+  <body>
+
+      <!-- İçerik -->
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            </br></br></br><a class="list-item__link_2" href="#skills">Yorum Yap</a>
+          </li>
+          <li class="main-list__item list-item">
+            </br></br></br><a class="list-item__link_2" href="#about">Hakkımızda</a>
+          </li>
+          <li class="main-list__item list-item">
+            </br></br></br><a class="list-item__link_2" href="#skills">Becerilerim</a>
+          </li>
+        </ul></br></br></br>
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            </br></br></br><a class="list-item__link" href="#skills">Yorum Yap</a>
+          </li>
+          <li class="main-list__item list-item">
+            </br></br></br><a class="list-item__link" href="#about">Hakkımızda</a>
+          </li>
+          <li class="main-list__item list-item">
+            </br></br></br><a class="list-item__link" href="#skills">Becerilerim</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Önizleme bölümü -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title"><b>Burak Umut İPEK</b></h1>
+        <p class="home__subtitle"><b>Python Programcısı & Web Programcısı</b></p>
+      </section>
+      <!-- Hakkımda bölümü -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title"><b>Hakkımda</b></h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            <b>İsim : Burak Umut İPEK<br />
+            Yaşımız : {{yasim}} </br>
+            Yaşadığımız Yer : Van/İpekyolu <br />
+            Bildiğimiz Yazılım Dilleri : <br />
+                + Python<br />
+                + HTML<br />
+                + CSS<br />
+                + Scratch<br />
+                + Microsoft Small Basic<br />
+                + Arduino <br />
+                + C# <br /></b>
+          </p>
+          <span><img class="img_umut"
+            class="info-block__img"
+            src="../static/img/profile.png"
+            alt="me"
+            width="250"
+            height="250"
+          />
+          <img class="img_umut_2"
+            class="info-block__img"
+            src="../static/img/download.png"
+            alt="me"
+            width="250"
+            height="250"
+          />
+          </span>
+        </div>
+      </section>
+      <!-- Beceriler bölümü -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="about__title"><b>Becerilerimiz</b></h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/python.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_python" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_discord" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/html.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_html" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/db.webp"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_db" value="SHOW PROJECT">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img fas_fa_image_items" src="../static/img/python-project.png" alt="project" width="500">
+              <a class="project__link" href=""><b>GitHub'da aç</b></a>
+          </div>
+        {% endif %}
+      </section>
+
+
+
+      <!-- Geri bildirim formu -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="about__title">Yorum Yap</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="E-mail'inizi Giriniz" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="90" rows="10" required placeholder="Yorum Yaz"></textarea>
+          </label>
+          <button class="form__button" type="submit">Gönder</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
