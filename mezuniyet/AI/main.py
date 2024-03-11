@@ -2,7 +2,7 @@
 # import openai
 
 # #API Anahtarı
-# openai.api_key = "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"#Şu An Güncel
+# openai.api_key = "sk-**************************************"#Şu An Güncel
 
 # while True:
 #     soru = input("Sizin Sorunuz (Çıkış Yapmak İstiyorsanız \"q\" Tıklatın) : ")
